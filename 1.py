@@ -5,7 +5,8 @@
 # e.g. (3+6+9+...+999) + (5+10+15+...+995) - (15+30+45+...+990)
 # = 3+999 + 6+996 + 9+993 + ... + 498+504 + 501 + etc
 # = 1002  + 1002  + 1002  + ... +  1002   + 501 + etc
-# = 501*333 + etc (333 is how many numbers divisible by 3 there are between 0 and 1000)
+# = 501*333 + etc
+# (333 is how many numbers divisible by 3 there are between 0 and 1000)
 # similarly for 5 and 15
 
 numbers = [3, 5]
