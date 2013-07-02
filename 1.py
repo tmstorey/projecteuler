@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+# https://projecteuler.net/problem=1
 # Find the sum of all the multiples of 3 or 5 below 1000.
 # e.g. (3+6+9+...+999) + (5+10+15+...+995) - (15+30+45+...+990)
 # = 3+999 + 6+996 + 9+993 + ... + 498+504 + 501 + etc
