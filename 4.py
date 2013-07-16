@@ -10,11 +10,12 @@ def isPalindrome(n):
 
 palindrome = 0
 
-for i in xrange(999, 0, -1):
-    for j in xrange(999, i ,-1):
-        if isPalindrome(i*j):
+for i in xrange(999,99,-1):
+    for j in xrange(999,i,-1):
+        if isPalindrome(i*j) and i*j > palindrome:
             palindrome = i*j
-            print i, "*", j, "=", palindrome
+            ij = (i,j)
             break
-    if palindrome:
-        break
+
+i, j = ij
+print i, "*", j, "=", palindrome
