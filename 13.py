@@ -107,16 +107,9 @@ numbers = [
     "53503534226472524250874054075591789781264330331690",
 ]
 
-current = 0
+sum = 0
 
-for i in range(50):
-    sum = 0
-    for number in numbers:
-        sum += int(number[i])
-    if len(str(current)) - 10 > len(str(sum)):
-        print str(current)[:10]
-        break
-    else:
-        current *= 10
-        current += sum
+for number in numbers:
+    sum += int(number)
+print str(sum)[:10]
     
