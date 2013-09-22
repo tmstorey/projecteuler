@@ -14,17 +14,14 @@ def triangles():
         triangle += i
         yield triangle
 
-def all_divisors(prime_factors):
-    if prime_factors:
-        prime, exponent = prime_factors[0]
-        for i in range(exponent+1):
-            for j in all_divisors(prime_factors[1:]):
-                yield (prime ** i) * j
-    else:
-        yield 1
+def num_divisors(exponents):
+    product = 1
+    for exponent in exponents:
+        product *= exponent
+    return product
 
 for triangle in triangles():
-    prime_factors = []
+    exponents = []
     divisors = []
     
     for prime in generate():
@@ -35,11 +32,8 @@ for triangle in triangles():
             triangle /= prime
             exponent += 1
         if exponent:
-            prime_factors.append((prime, exponent))
+            exponents.append(exponent+1)
     
-    for divisor in all_divisors(prime_factors):
-        divisors.append(divisor)
-    
-    if len(divisors) > 500:
+    if num_divisors(exponents) > 500:
         print divisors[-1]
         break
